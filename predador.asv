@@ -11,7 +11,8 @@ for j=1:tamPop
     flag = 0;
     capInd = b;
     for i=1:tarefas
-        capInd(1,P(i,j)) = capInd(1,P(i,j)) - a(P(i,j),i);
+        capInd(pop(i,j),1) = capInd(1,pop(i,j)) - a(pop(i,j),i);
+    end
     %Analisa se eh uma solucao factivel
     for i=1:5
         if capInd[i] < 0
@@ -21,9 +22,9 @@ for j=1:tamPop
     end
     % Se a solucao for infactivel, retira ela da populacao
     if flag == 1
-        pop[:,j] = [];
+        pop(:,j) = [];
+        % Volta o contatod 1 posicao pois a coluna foi retirada
         j = j-1;
-    end
     end
 end
 sobreviventes = pop;

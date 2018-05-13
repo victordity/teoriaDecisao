@@ -10,7 +10,7 @@ clc
 % b = Capacidade do agente i
 load('teste1_5x25.mat')
 % =========================================================================
-N = 50;
+N = 5000;
 % Gera populacao inicial
 for i = 1:N
     P(:,i) = randi([1 m],1,n);
