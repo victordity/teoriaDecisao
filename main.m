@@ -8,9 +8,9 @@ clc
 %     (5 agentes realizando 25 tarefas cada 1)
 % c = Custo de atribuir a tarefa j ao agente i
 % b = Capacidade do agente i
-load('teste1_5x25.mat')
+load('teste2_5x25.mat')
 % =========================================================================
-N = 5000;
+N = 500;
 % Gera populacao inicial
 for i = 1:N
     P(:,i) = randi([1 m],1,n);
